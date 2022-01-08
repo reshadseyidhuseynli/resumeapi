@@ -1,0 +1,8 @@
+com\company\resume\controller\LogoutController.class
+com\company\resume\controller\UsersController.class
+com\company\resume\filter\SecurityFilter.class
+mainresources\com\mycompany\resume\controller\ErrorController.class
+com\company\resume\controller\LoginController.class
+mainresources\com\mycompany\resume\controller\UserInfoController.class
+com\company\resume\util\ControllerUtil.class
+com\mycompany\resume\controller\UserDetailController.class
