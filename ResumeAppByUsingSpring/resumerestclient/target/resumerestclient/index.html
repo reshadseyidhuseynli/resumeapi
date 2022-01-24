@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function printData(arr) {
+            var result = document.getElementById("result")
+            result.innerHTML = ""
+            for (var i = 0; i < arr.length; i++) {
+                var u = arr[i]
+                var deletebtn = '<button onClick="deleteUser('+ u.id +')" > Delete </button>'
+                var toString = u.id + " " + u.name + " " + u.surname + deletebtn + "<br/>"
+                result.innerHTML += toString
+            }
+        }
+        function getUsers(){
+            var xhttp = new XMLHttpRequest()
+
+            xhttp.onreadystatechange = function (){
+                if (this.readyState == 4 && this.status == 200){
+                    var response = JSON.parse(this.responseText)
+                    var list = response.object
+                    printData(list)
+                }
+            }
+            xhttp.open("GET", "http://localhost:8081/resumerest/users", true)
+            xhttp.send()
+
+        }
+        function deleteUser(id){
+            var xhttp = new XMLHttpRequest()
+
+            xhttp.onreadystatechange = function (){
+                if (this.readyState == 4 && this.status == 200){
+                    getUsers()
+                }
+            }
+            xhttp.open("DELETE", "http://localhost:8081/resumerest/users"+id, true)
+            xhttp.send()
+
+        }
+    </script>
+</head>
+<body onload="getUsers()">
+    <h1>Welcome to RestClient</h1>
+    <div id="result"></div>
+</body>
+</html>
