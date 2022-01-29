@@ -8,10 +8,7 @@ package com.company.service.inter;
 import com.company.entity.User;
 import java.util.List;
 
-/**
- *
- * @author SRSHD
- */
+
 public interface UserServiceInter {
 
     public User getUserByID(int userID);

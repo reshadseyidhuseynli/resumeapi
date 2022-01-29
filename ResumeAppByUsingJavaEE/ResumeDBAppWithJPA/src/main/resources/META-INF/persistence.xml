@@ -6,7 +6,6 @@
     <class>com.company.entity.Country</class>
     <class>com.company.entity.User</class>
     <class>com.company.entity.Skill</class>
-    <class>com.company.entity.Test</class>
     <class>com.company.entity.EmploymentHistory</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/resume?zeroDateTimeBehavior=CONVERT_TO_NULL"/>

@@ -24,10 +24,6 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlTransient;
 
-/**
- *
- * @author SRSHD
- */
 @Entity
 @Table(name = "user")
 public class User implements Serializable {

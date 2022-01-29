@@ -27,8 +27,7 @@ public class UserDAO extends AbstractDAO implements UserDAOInter {
         List<User> list = q.getResultList();
         closeEmf();
         if (list.size() == 1) {
-            User result = list.get(0);
-            return result;
+            return list.get(0);
         } else {
             return null;
         }
@@ -37,8 +36,7 @@ public class UserDAO extends AbstractDAO implements UserDAOInter {
     @Override
     public List<User> getAll() {
         EntityManager em = createEM();
-        Query q = em.createQuery("select u from User u", User.class);
-        List<User> list = q.getResultList();
+        List<User> list = em.createQuery("select u from User u", User.class).getResultList();
         closeEmf();
         return list;
     }

@@ -8,10 +8,6 @@ package com.company.dao;
 import com.company.entity.User;
 import java.util.List;
 
-/**
- *
- * @author SRSHD
- */
 public interface UserRepositoryCustom {
 
     public User getUserByID(int userID);

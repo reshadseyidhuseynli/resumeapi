@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mycompany.main;
+package com.company.main;
 
 import com.company.implementation.CountryDAO;
 import com.company.implementation.EmploymentHistoryDAO;

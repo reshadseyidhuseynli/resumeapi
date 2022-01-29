@@ -17,10 +17,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlTransient;
 
-/**
- *
- * @author SRSHD
- */
 @Entity
 @Table(name = "country")
 public class Country implements Serializable {
